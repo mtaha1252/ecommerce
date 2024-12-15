@@ -101,7 +101,8 @@ error_reporting(E_ALL);
                                     </div>
                                     <span class="prod-price">$<?php echo $product['product_price']; ?></span>
                                 </div>
-                                <a href="#" class="prod-btn">Add to Cart</a>
+                                <a href="productDetails.php?product_id=<?php echo $product['product_id']; ?>" class="prod-btn">View</a>
+
                             </div>
                         </div>
                 <?php
