@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments and Transactions</title>
+    <link rel="stylesheet" href="payments.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"> <!-- Boxicons for icons -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="menu-toggle">
+            <i class='bx bx-menu'></i> 
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <h2>Payments & Transactions</h2>
+        </nav>
+        <div class="nav-icons">
+            <div class="notifications">
+                <a href=""><i class='bx bx-bell'></i></a> 
+                <div class="notification-dropdown not-dropdown-content">
+                  <p>No new notifications</p>
+                </div>
+              </div>
+              <div class="notifications">
+                <a href=""><i class='bx bx-cog'></i></a>
+                <div class="notification-dropdown not-dropdown-content">
+                  <p>Settings options coming soon</p>
+                </div>
+              </div>
+            <a href="login.html"><i class='bx bx-log-out'></i></a> 
+        </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <ul>
+        <li><a href="dashboard.html"><i class='bx bx-user'></i>DashBoard</a></li>
+  
+        <li class="products-dropdown">
+          <a href="#"><i class='bx bx-box'></i> Products Management</a>
+          <ul class="products-dropdown-content">
+            <li><a href="add.html">Add Product</a></li>
+            <li><a href="remove.html">Remove Product</a></li>
+            <li><a href="stock.html">Restock/Out of Stock</a></li>
+          </ul>
+        </li>
+        <li><a href="payments.html"><i class='bx bx-credit-card'></i> Payments and Transactions</a></li>
+        <li><a href="orders.html"><i class='bx bx-cart'></i> Orders</a></li>
+        <li><a href="registeredCustomers.html"><i class='bx bx-group'></i> Registered Customers</a></li>
+        <li><a href="CustomerSupport.html"><i class='bx bx-headphone'></i> Customer Support System</a></li>
+        <li><a href="shipping.html"><i class='bx bx-package'></i> Shipping & Delivery Management</a></li>
+      </ul>
+         <div class="sidebar-icons">
+            <div class="notside">
+              <a href=""><i class='bx bx-bell'></i>Notifications</a> 
+              <div class="notSide-dropdown-content">
+                <p>No Notifications</p>
+              </div>
+            </div>
+            <div class="notside">
+              <a href=""><i class='bx bx-cog'></i>Settings</a> 
+              <div class="notSide-dropdown-content">
+                <p>Settings options coming soon</p>
+              </div>
+            </div>
+            <a href="login.html"><i class='bx bx-log-out'></i> Logout</a>
+          </div>
+    </aside>
+   <div class="main-content">
+       <h1>Payments and Transactions</h1>
+       <div class="table-container">
+
+       <table id="paymentsTable">
+           <thead>
+               <tr>
+                   <th>Transaction ID</th>
+                   <th>Customer ID</th>
+                   <th>Customer Name</th>
+                   <th>Amount</th>
+                   <th>Payment Method</th>
+                   <th>Date</th>
+                   <th>Status</th>
+               </tr>
+           </thead>
+           <tbody>
+               <!-- Payments -->
+           </tbody>
+       </table>
+       </div>
+   </div>
+
+   <script src="payments.js"></script>
+</body>
+</html>

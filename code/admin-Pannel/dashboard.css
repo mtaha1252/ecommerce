@@ -1,0 +1,285 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: maroon;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar-header {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #940909;
+    border-radius: 8px;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+
+.notifications {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-dropdown {
+    display: none; 
+    position: absolute;
+    top: 30px; 
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.notification-dropdown p {
+    margin: 0;
+    text-align: center;
+    color: #888;
+}
+
+.notifications:hover .notification-dropdown {
+    display: block;
+}
+
+.dashboard-icons i {
+    font-size: 24px;
+    color: maroon;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.dashboard-icons i:hover {
+    color: #940909; 
+}
+
+
+/* Products Dropdown */
+.products-dropdown {
+    position: relative;
+}
+
+.products-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: maroon;
+    width: 250px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.products-dropdown-content li a {
+    padding: 12px 20px;
+}
+
+.products-dropdown:hover .products-dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    flex: 1;
+    background-color: white;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-message h1 {
+    font-size: 24px;
+    color: maroon;
+}
+
+.dashboard-icons i {
+    font-size: 24px;
+    color: maroon;
+    margin-left: 20px;
+}
+
+/* Metrics Section */
+.metrics-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.metric-card {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-10px);
+}
+
+.metric-icon {
+    font-size: 40px;
+    color: maroon;
+    margin-bottom: 10px;
+}
+
+.metric-info h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.metric-info p {
+    font-size: 24px;
+    font-weight: bold;
+    color: maroon;
+}
+
+/* Product Section */
+.top-products-section {
+    margin-top: 50px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.product-card img {
+    width: 200px; 
+    height: 250px; 
+    object-fit: cover; 
+    margin-bottom: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    color: maroon;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Recent Orders Section */
+.recent-orders-section {
+    margin-top: 50px;
+}
+
+.recent-orders-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-orders-section th,
+.recent-orders-section td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.recent-orders-section th {
+    background-color: maroon;
+    color: white;
+}
+
+.recent-orders-section td button {
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.recent-orders-section td button:hover {
+    background-color: #940909;
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .metrics-section, .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    
+}

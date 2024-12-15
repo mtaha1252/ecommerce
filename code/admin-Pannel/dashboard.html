@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Admin Panel</h3>
+        </div>
+        <ul>
+            <li><a href="../user/main.php"><i class='bx bx-user'></i>User Panel</a></li>
+
+
+
+            <li class="products-dropdown">
+                <a href="#"><i class='bx bx-box'></i> Products Management</a>
+                <ul class="products-dropdown-content">
+                    <li><a href="add.html">Add Product</a></li>
+                    <li><a href="remove.html">Remove Product</a></li>
+                    <li><a href="stock.html">Restock/Out of Stock</a></li>
+                </ul>
+            </li>
+            <li><a href="orders.html"><i class='bx bx-cart'></i> Orders</a></li>
+            <li><a href="payments.html"><i class='bx bx-credit-card'></i> Payments & Transactions</a></li>
+            <li><a href="registeredCustomers.html"><i class='bx bx-group'></i> Customers</a></li>
+            <li><a href="CustomerSupport.html"><i class='bx bx-headphone'></i> Customers Support System</a></li>
+            <li><a href="shipping.html"><i class='bx bx-package'></i> Shipping & Delivery</a></li>
+            <li><a href="#"><i class='bx bx-cog'></i> Settings</a></li>
+            <li><a href="login.html"><i class='bx bx-log-out'></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="main-content">
+        <header class="main-header">
+            <div class="welcome-message">
+                <h1>Welcome, Admin!</h1>
+                <p>Here's what's happening with your store today.</p>
+            </div>
+            <div class="dashboard-icons">
+                <div class="notifications">
+                    <i class='bx bx-bell'></i> 
+                    <div class="notification-dropdown">
+                        <p>No new notifications</p>
+                    </div>
+                </div>
+                <div class="notifications">
+                    <i class='bx bx-cog'></i>
+                    <div class="notification-dropdown">
+                        <p>Yet to Come</p>
+                    </div>
+                </div>
+              <a href="login.html"> <i class='bx bx-log-out'></i></a> 
+            </div>
+            
+        </header>
+
+        <!-- Metrics Section -->
+        <section class="metrics-section">
+            <div class="metric-card">
+                <div class="metric-icon"><i class='bx bx-cart'></i></div>
+                <div class="metric-info">
+                    <h3>Total Orders</h3>
+                    <p>1,250</p>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon"><i class='bx bx-dollar-circle'></i></div>
+                <div class="metric-info">
+                    <h3>Total Sales</h3>
+                    <p>Rs. 450,000</p>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon"><i class='bx bx-group'></i></div>
+                <div class="metric-info">
+                    <h3>Total Customers</h3>
+                    <p>300</p>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon"><i class='bx bx-package'></i></div>
+                <div class="metric-info">
+                    <h3>Pending Orders</h3>
+                    <p>75</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-products-section">
+    <h2>Top Selling Products of the Month</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="images (3).jpeg" alt="Product 1">
+            <div class="product-info">
+                <h3>Ladies Maxi</h3>
+                <p><strong>20</strong> items left in stock</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="img.jpg" alt="Product 2">
+            <div class="product-info">
+                <h3>Baby Girl Frock</h3>
+                <p><strong>15</strong> items left in stock</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="images (2).jpeg" alt="Product 3">
+            <div class="product-info">
+                <h3>Kid's Suit Set</h3>
+                <p><strong>8</strong> items left in stock</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Recent Orders Section -->
+        <section class="recent-orders-section">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD12345</td>
+                        <td>Areeba</td>
+                        <td>Men's Shirt</td>
+                        <td>Shipped</td>
+                        <td><button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD12346</td>
+                        <td>Hifza</td>
+                        <td>Women's Dress</td>
+                        <td>Pending</td>
+                        <td><button>View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

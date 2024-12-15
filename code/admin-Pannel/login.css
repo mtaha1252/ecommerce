@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: maroon;
+  color: goldenrod;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+}
+
+.logo img {
+  background-color: transparent; 
+  max-width: 60px;
+  height: auto;
+  margin-right: 20px; 
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+}
+
+.navbar h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: goldenrod;
+  text-transform: uppercase;
+}
+
+.login-container {
+  margin-top: 60px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 12px 4px maroon;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg , rgb(232, 51, 51), rgb(110, 3, 3));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  color: goldenrod;
+  background: linear-gradient(45deg ,rgb(110, 3, 3), rgb(232, 51, 51));
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  display: none;
+}
