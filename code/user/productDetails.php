@@ -60,6 +60,14 @@ $rearImagePath = !empty($product['rear_image']) ? '../uploads/' . trim($product[
                 <?php endif; ?>
             </div>
             <p><strong>Price:</strong> $<?php echo htmlspecialchars($product['product_price']); ?></p>
+            <p><strong>Colors:</strong><?php
+                                        $colors = explode(',', $product['product_colors']); // Split the colors into an array
+                                        echo htmlspecialchars(implode(', ', $colors)); // Display the colors, joined by commas
+                                        ?></p>
+            <p><strong>Sizes:</strong><?php
+                                        $sizes = explode(',', $product['product_sizes']); // Split the sizes into an array
+                                        echo htmlspecialchars(implode(', ', $sizes)); // Display the sizes, joined by commas
+                                        ?></p>
             <p><strong>Description:</strong> <?php echo nl2br(htmlspecialchars($product['product_description'])); ?></p> <!-- Added nl2br for formatting -->
         </div>
     </div>
