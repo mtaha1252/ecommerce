@@ -1,0 +1,30 @@
+.bgim {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.video-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.content-section {
+    padding: 20px;
+}
+
+.img-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-item img {
+    width: 100%;
+    max-width: 300px;
+}

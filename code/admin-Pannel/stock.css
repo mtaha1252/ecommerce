@@ -336,4 +336,14 @@ button.unstock:hover {
     }
     
 }
+button:disabled {
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.restock-qty:disabled {
+    background-color: #f9f9f9;
+    color: #888;
+}
 
