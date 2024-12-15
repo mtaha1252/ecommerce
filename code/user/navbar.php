@@ -23,11 +23,13 @@ $categories = $result->fetch_all(MYSQLI_ASSOC);
                 <?php
                 // Loop through categories and display them dynamically
                 foreach ($categories as $category) {
-                    // Create dynamic link for each category
-                    echo '<li><a href="#' . strtolower($category['name']) . '-section">' . htmlspecialchars($category['name']) . '</a></li>';
+                    // Check if the category name is valid and use it in the URL
+                    $categoryName = strtolower($category['name']);
+                    echo '<li><a href="' . $categoryName . 'product.php">' . htmlspecialchars($category['name']) . '</a></li>';
                 }
                 ?>
             </ul>
+
         </li>
         <li><a href="about.php">About Us</a></li>
         <li><a href="contact.php">Contact Us</a></li>

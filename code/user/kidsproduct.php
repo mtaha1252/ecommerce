@@ -6,10 +6,10 @@ $query = "SELECT * FROM products WHERE product_category = 'kids'";
 $result = $conn->query($query);
 
 if ($result) {
-    $kidsProducts = $result->fetch_all(MYSQLI_ASSOC);
+  $kidsProducts = $result->fetch_all(MYSQLI_ASSOC);
 } else {
-    echo "Error fetching products: " . $conn->error;
-    $kidsProducts = [];
+  echo "Error fetching products: " . $conn->error;
+  $kidsProducts = [];
 }
 
 ini_set('display_errors', 1);
@@ -39,32 +39,41 @@ error_reporting(E_ALL);
         <h2>Kids Products</h2>
       </div>
       <div class="prod-grid">
-        <?php foreach ($kidsProducts as $product) { 
+        <?php foreach ($kidsProducts as $product) {
+          if ($product['product_category'] === 'kids') { // Check for Kids category
             $frontImagePath = '../uploads/' . trim($product['front_image']); // Front image
             $rearImagePath = '../uploads/' . trim($product['rear_image']); // Rear image
         ?>
-          <div class="product">
-            <div class="prod-img">
-              <img src="<?php echo $frontImagePath; ?>" alt="product front image" />
-              <?php if (!empty($rearImagePath)): ?>
-                <img src="<?php echo $rearImagePath; ?>" alt="product rear image" class="rear-img" />
-              <?php endif; ?>
-            </div>
-            <div class="prod-info">
-              <div>
-                <div class="rate">
-                  <i class='bx bxs-star'></i>
-                  <i class='bx bxs-star'></i>
-                  <i class='bx bxs-star'></i>
-                  <i class='bx bxs-star'></i>
-                  <i class='bx bxs-star'></i>
-                </div>
-                <span class="prod-price">$<?php echo $product['product_price']; ?></span>
+            <div class="product">
+              <div class="prod-img">
+                <img src="<?php echo $frontImagePath; ?>" alt="product front image" />
+                <?php if (!empty($rearImagePath)): ?>
+                  <img src="<?php echo $rearImagePath; ?>" alt="product rear image" class="rear-img" />
+                <?php endif; ?>
               </div>
-              <a href="#" class="prod-btn">Add to Cart</a>
+              <div class="prod-info">
+                <div>
+                  <div class="rate">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                  </div>
+                  <span class="prod-price">$<?php echo $product['product_price']; ?></span>
+                </div>
+                <a href="#" class="prod-btn"
+                  data-id="<?php echo $product['product_id']; ?>"
+                  data-name="<?php echo $product['product_name']; ?>"
+                  data-price="<?php echo $product['product_price']; ?>">
+                  Add to Cart
+                </a>
+
+              </div>
             </div>
-          </div>
-        <?php } ?>
+        <?php
+          }
+        } ?>
       </div>
     </div>
   </div>
@@ -99,7 +108,7 @@ error_reporting(E_ALL);
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="kidsproduct.js"></script>
 </body>
 
 </html>
