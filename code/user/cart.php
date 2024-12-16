@@ -1,7 +1,6 @@
 <?php
 // Start the session to access session variables
 session_start();
-
 // Check if the cart session variable exists, if not, initialize it
 if (!isset($_SESSION['cart'])) {
   $_SESSION['cart'] = [];
@@ -86,13 +85,7 @@ if (isset($_SESSION['cart'])) {
   <script src="cart.js"></script>
   <script>
     document.getElementById('checkoutButton').addEventListener('click', function() {
-      // JavaScript checks if user is logged in based on the PHP session
-      <?php if (isset($_SESSION['username'])): ?>
-        window.location.href = 'checkout.php';
-      <?php else: ?>
-        // Redirect to sign-in.php if the user is not logged in
-        window.location.href = 'sign-in.php';
-      <?php endif; ?>
+      window.location.href = 'checkout.php';
     });
   </script>
 </body>
