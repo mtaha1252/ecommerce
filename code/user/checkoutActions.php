@@ -42,7 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Insert order into the orders table
     $order_sql = "INSERT INTO orders (user_id, name, email, phone, address, payment_method, total_amount, order_status, order_items) 
-                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
 
     if ($stmt = $conn->prepare($order_sql)) {
         // Bind parameters for the order insertion
